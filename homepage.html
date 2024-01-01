@@ -1,0 +1,633 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="voice.js"></script>
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+}
+
+#navbar {
+  color:white;
+  background-image: url('homeb.jpg');
+  background:translucent;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-color: #fcf769;
+  padding: 20px 10px;
+  transition: 0.4s;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 25px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar a.active {
+  background-color: rgb(217, 159, 248);
+  color: rgb(104, 12, 157);
+  font-family: Britannic;
+  font-weight: bolder;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+#navbar a:hover {
+  background-color: #f9e5e5;
+  color: rgb(71, 54, 199);
+  transform:scale(1.2);
+}
+
+
+#navbar-right {
+  float: right;
+  bottom:0;
+  float: bottom;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -190px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 240px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left:0;
+}
+#org{
+animation-name: mv;
+  animation-duration: 2s;
+}
+#forms{
+animation-name: mv;
+  animation-duration: 2s;
+}
+#impacts{
+animation-name: mv;
+  animation-duration: 2s;
+}
+#glance{
+animation-name: mv;
+  animation-duration: 2s;
+}
+@keyframes mv {
+  0%   { left: 900px;}
+  50%  {left:0px;}
+  100% { left:-190px;}
+}
+#impacts {
+  top: 320px;
+  background-color: rgb(4, 169, 109);
+  font-family: Britannic;
+  font-weight: bolder;
+}
+
+#org {
+  top: 380px;
+  background-color: rgb(169, 92, 220);
+  font-family: Britannic;
+  font-weight: bolder;
+}
+#forms {
+  top: 440px;
+  background-color: rgb(32, 148, 243);
+  font-family: Britannic;
+  font-weight: bolder;
+}
+
+#glance {
+  top: 525px;
+  background-color: rgb(245, 64, 51);
+  font-family: Britannic;
+  font-weight: bolder;
+}
+
+
+h3{
+  margin-left: 60px;
+  justify-content: center;
+  text-align: center;
+  font-family:Algerian;
+  color:rgb(57, 118, 209);
+}
+
+h1{
+  margin-left: 60px;
+  justify-content: center;
+  text-align: center;
+  font-family:Algerian;
+  color:rgb(169, 62, 74);
+}
+p{
+  justify-content: center;
+  text-align: center;
+  margin-left:60px;
+  font-family:Baskerville Old Face;
+  color:rgb(4, 129, 83);
+  font-weight: bolder;
+}
+span{
+
+  justify-content: center;
+  text-align: center;
+  margin-left:60px;
+  font-family:Baskerville Old Face;
+  color:rgb(4, 129, 83);
+  font-weight: bolder;
+}
+
+h2{
+  justify-content: center;
+  text-align: center;
+  margin-left:60px;
+  font-family:Broadway;
+  color:BF7500;
+
+}
+ol{
+  margin-left:60px;
+  font-family:Baskerville Old Face;
+  color:rgb(4, 129, 83);
+  font-weight: bolder;
+}
+
+ul{
+  margin-left:60px;
+  font-family:Baskerville Old Face;
+  color:rgb(4, 129, 83);
+  font-weight: bolder;
+}
+body{
+  background-color:rgb(249, 233, 177)
+}
+
+hr{
+  width:50%;
+  color:blue;
+  border-top:10px dashed ; 
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }to{
+        opacity:1;
+    }
+}
+
+@keyframes zoom{
+    from{
+        scale:10%
+    }to{
+        scale:100%
+    }
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border:#f9e5e5;
+    outline:auto;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color:aqua;
+    color:red;
+  }
+  #more {display: none;}
+  #more2 {display: none;}
+  #more3 {display: none;}
+  #more4 {display: none;}
+  #more5 {display: none;}
+  #more6 {display: none;}
+  #more7 {display: none;}
+#animate{
+  animation-name:bottom;
+  animation-duration:2s;
+}
+@keyframes bottom{
+  from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+</style>
+</head>
+<body >
+  <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>  
+
+<div id="navbar" >
+    <h5 id="logo" style="font-size:40px;color:white;  
+    text-align:center;
+    display: flex;
+    justify-content:center;animation:zoom 2s ease-in-out forwards">ONLINE WORLD'S THREAT:CYBERBULLYING</h5>
+        <div id="navbar-right"style="animation:zoom 2s ease-in-out forwards">
+          <a class="active" href="Causes.html"onclick="speakText('Causes Of Cyberbullying')">CAUSES</a>
+          <a class="active" href="EffectsOfCyberbullying.html"onclick="speakText('Effects Of Cyberbullying')">EFFECTS</a>
+          <a class="active" href="PreventiveMeasures.html"onclick="speakText('Ways To Prevent Cyberbullying')">PREVENTIVE MEASURES</a>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav" >
+        <a href="Impacts.html" id="impacts"onclick="speakText('Cyberbullyings Impact On Society')">IMPACTS</a>
+        <a href="org.html" id="org"onclick="speakText('ORGANISATIONS FIGHTING AGAINST CYBERBULLYING')">ORGANISATIONS</a>
+        <a href="FORMSOFCYBERBULLYING.html" id="forms"onclick="speakText('FORMS OF CYBERBULLYING')">FORMS OF CYBERBULLYING</a>
+        <a href="glance.html" id="glance"onclick="speakText('A GLANCE OF CYBERBULLING IN TODAYS WORLD')">A GLANCE IN TODAY'S WORLD</a>
+      </div>
+
+
+<div  style="margin-top:210px;padding:15px 15px 25px;font-size:30px;animation:opacity 3s ease-in-out forwards">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button> 
+<div id="animate">
+  <h1>What is bullying ?</h1> 
+<p><b>Bullying is repeated aggressive behavior that can be physical, verbal, or relational,
+take place in-person or online, at school, work, in the neighborhood, or even at home. </b></p>
+<img src="n.png"position="top:500px" align="right" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h1>What do you understand by the term 'CYBERBULLING' ?</h1>
+<p>Cyberbullying is bullying with the use of digital technologies.
+It can take place on social media, messaging platforms, gaming platforms and mobile phones.
+It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted.
+Examples include:</p>
+<ul>
+<li>Spreading lies about or posting embarrassing photos or videos of someone on social media.</li>
+<li>Sending hurtful, abusive or threatening messages, images or videos via messaging platforms.</li>
+<li>Impersonating someone and sending mean messages to others on their behalf or through fake accounts.</li>
+</ul>
+<p>Face-to-face bullying and cyberbullying can often happen alongside each other.
+But cyberbullying leaves a digital footprint – a record that can prove useful and provide evidence to help stop the abuse.</p>
+<hr>
+<img src="n2.webp"position="top:500px" align="left" hspace="10" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>1. Am I being bullied online?
+How do you tell the difference between a joke and bullying?</h2>
+<p>All friends joke around with each other, but sometimes it’s hard to tell if someone is just having fun or trying to hurt you, especially online.
+Sometimes they’ll laugh it off with a "just kidding, or "don’t take it so seriously."" </p>
+<span id="dots">...</span><span id="more">
+<p>But if you feel hurt or think others are laughing at you instead of with you, then the joke has gone too far.
+If it continues even after you’ve asked the person to stop and you are still feeling upset about it, then this could be bullying.</p>
+<p>And when the bullying takes place online, it can result in unwanted attention from a wide range of people including strangers.
+Wherever it may happen, if you are not happy about it, you should not have to stand for it.</p>
+<p>Call it what you will – if you feel bad and it doesn’t stop, then it’s worth getting help.
+Stopping cyberbullying is not just about calling out bullies, it’s also about recognizing that everyone deserves respect – online and in real life.</p>
+</span>
+<button onclick="myFunction()" id="btn" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="N3.jpg"position="top:500px" align="right" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>2. Who should I talk to if someone is bullying me online? Why is reporting important?</h2>
+<p>If you think you’re being bullied, the first step is to seek help from someone you trust such as your parents, a close family member or another trusted adult.</p>
+<span id="dots2">...</span><span id="more2">
+<p>In your school you can reach out to a counsellor, the sports coach or your favourite teacher – either online or in person.</p>
+<p>And if you are not comfortable talking to someone you know, search for a helpline in your country to talk to a professional counsellor.</p>
+<p>If the bullying is happening on a social platform, consider blocking the bully and formally reporting their behaviour on the platform itself.
+Social media companies are obligated to keep their users safe.</p>
+<hr>
+<h3 style="font-family: Monotype Corsiva;">For bullying to stop, it needs to be identified and reporting it is key.</h3>
+<hr>
+<p>It can be helpful to collect evidence – text messages and screen shots of social media posts – to show what’s been going on.</p>
+<p>For bullying to stop, it needs to be identified and reporting it is key.
+It can also help to show the bully that their behaviour is unacceptable.</p>
+<p>If you are in immediate danger, then you should contact the police or emergency services in your country.</p>
+</span>
+<button onclick="myFunction2()" id="btn2" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="n4.jpg"position="top:500px" align="left" vspace="10" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>3. I’m experiencing cyberbullying, but I’m afraid to talk to my parents about it.
+How can I approach them?</h2>
+<p>If you are experiencing cyberbullying, speaking to a trusted adult – someone you feel safe talking to – is one of the most important first steps you can take.</p>
+<span id="dots3">...</span><span id="more3">
+<p>Talking to parents isn’t easy for everyone.
+But there are things you can do to help the conversation.
+Choose a time to talk when you know you have their full attention.
+Explain how serious the problem is for you.
+Remember, they might not be as familiar with technology as you are, so you might need to help them to understand what’s happening.</p>
+<p>They might not have instant answers for you, but they are likely to want to help and together you can find a solution. Two heads are always better than one!
+If you are still unsure about what to do, consider reaching out to other trusted people.
+There are often more people who care about you and are willing to help than you might think!</p>
+</span>
+<button onclick="myFunction3()" id="btn3" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="n5.jpeg"position="top:500px" align="right" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>4. How can I help my friends report a case of cyberbullying especially if they don’t want to do it?</h2>
+<p>Anyone can become a victim of cyberbullying.
+If you see this happening to someone you know, try to offer support.</p>
+<span id="dots4">...</span><span id="more4">
+<p>It is important to listen to your friend.
+Why don’t they want to report being cyberbullied?
+How are they feeling?
+Let them know that they don’t have to formally report anything, but it’s crucial to talk to someone who might be able to help.</p>
+<hr>
+<h3 style="font-family: Monotype Corsiva;">Anyone can become a victim of cyberbullying.</h3>
+<hr>
+<p>Remember, your friend may be feeling fragile.
+Be kind to them.
+Help them think through what they might say and to whom.
+Offer to go with them if they decide to report.
+Most importantly, remind them that you’re there for them and you want to help.</p>
+<p>If your friend still does not want to report the incident, then support them in finding a trusted adult who can help them deal with the situation.
+Remember that in certain situations the consequences of cyberbullying can be life threatening.</p>
+<p>Doing nothing can leave the person feeling that everyone is against them or that nobody cares.
+Your words can make a difference.</p>
+</span>
+<button onclick="myFunction4()" id="btn4" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="n6.jpeg"position="top:500px" align="left" vspace="10" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>5. How do we stop cyberbullying without giving up access to the Internet?</h2>
+<p>Being online has so many benefits.
+However, like many things in life, it comes with risks that you need to protect against.</p>
+<span id="dots5">...</span><span id="more5">
+<p>If you experience cyberbullying, you may want to delete certain apps or stay offline for a while to give yourself time to recover.
+But getting off the Internet is not a long-term solution.
+You did nothing wrong, so why should you be disadvantaged?
+It may even send the bullies the wrong signal — encouraging their unacceptable behaviour. </p>
+<hr>
+<h3 style="font-family: Monotype Corsiva;">We need to be thoughtful about what we share or say that may hurt others.</h3>
+<hr>
+<p>We all want cyberbullying to stop, which is one of the reasons reporting cyberbullying is so important.
+But creating the Internet we want goes beyond calling out bullying.
+We need to be thoughtful about what we share or say that may hurt others.
+We need to be kind to one another online and in real life.
+It's up to all of us!</p>
+</span>
+<button onclick="myFunction5()" id="btn5" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="n7.jpg"position="top:500px" align="right" hspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>6. How do I prevent my personal information from being used to manipulate or humiliate me on social media?</h2>
+<p>Think twice before posting or sharing anything on digital platforms – it may be online forever and could be used to harm you later. Don’t give out personal details such as your address, telephone number or the name of your school.</p>
+<span id="dots6">...</span><span id="more6">
+<p>Learn about the privacy settings of your favourite social media apps.
+Here are some actions you can take on many of them: </p>
+<ol>
+<li>You can decide who can see your profile, send you direct messages or comment on your posts by adjusting your account privacy settings. </li> 
+<li>You can report hurtful comments, messages, photos and videos and request they be removed.</li>
+<li>Besides 'unfriending', you can completely block people to stop them from seeing your profile or contacting you.</li>
+<li>You can also choose to have comments by certain people to appear only to them without completely blocking them.</li>
+<li>You can delete posts on your profile or hide them from specific people. </li>
+</ol>
+<p>You can delete posts on your profile or hide them from specific people.</p>
+</span>
+<button onclick="myFunction6()" id="btn6"style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<img src="n8.jpg"position="top:500px" align="left" hspace="5" vspace="5" height="248" style="animation:opacity 2s ease-in-out forwards">
+<h2>7. Is there a punishment for cyberbullying?</h2>
+<p>Most schools take bullying seriously and will take action against it. If you are being cyberbullied by other students, report it to your school.</p>
+<span id="dots7">...</span><span id="more7">
+<p>People who are victims of any form of violence, including bullying and cyberbullying, have a right to justice and to have the offender held accountable.</p>
+<p>Laws against bullying, particularly on cyberbullying, are relatively new and still do not exist everywhere. This is why many countries rely on other relevant laws, such as ones against harassment, to punish cyberbullies.</p>
+<p>In countries that have specific laws on cyberbullying, online behaviour that deliberately causes serious emotional distress is seen as criminal activity. In some of these countries, victims of cyberbullying can seek protection, prohibit communication from a specified person and restrict the use of electronic devices used by that person for cyberbullying, temporarily or permanently.</p>
+<p>However, it is important to remember that punishment is not always the most effective way to change the behaviour of bullies. Sometimes, focusing on repairing the harm and mending the relationship can be better.</p>
+</span>
+<button onclick="myFunction7()" id="btn7" style="font-size: 18px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+font-weight:300;
+border:#1b07f3;
+outline:auto;
+background-color: rgb(148, 3, 251);
+color: rgb(253, 252, 253);
+cursor: pointer;
+padding: 5px;
+border-radius: 4px;">READ MORE</button>
+<h3 style="font-style:adventurous;color:#c315a3;">MADE BY:RASHIKA CHAUHAN</h3>
+<h3 style="font-style:adventurous;color:#c315a3;">CLASS:8'B'</h3>
+</div>
+<script>
+  let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("btn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction2() {
+    var dots = document.getElementById("dots2");
+    var moreText = document.getElementById("more2");
+    var btnText = document.getElementById("btn2");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction3() {
+    var dots = document.getElementById("dots3");
+    var moreText = document.getElementById("more3");
+    var btnText = document.getElementById("btn3");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction4() {
+    var dots = document.getElementById("dots4");
+    var moreText = document.getElementById("more4");
+    var btnText = document.getElementById("btn4");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction5() {
+    var dots = document.getElementById("dots5");
+    var moreText = document.getElementById("more5");
+    var btnText = document.getElementById("btn5");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction6() {
+    var dots = document.getElementById("dots6");
+    var moreText = document.getElementById("more6");
+    var btnText = document.getElementById("btn6");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction7() {
+    var dots = document.getElementById("dots7");
+    var moreText = document.getElementById("more7");
+    var btnText = document.getElementById("btn7");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "READ MORE"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "READ LESS"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+
+
+  </script>
+
+</html>
